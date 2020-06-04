@@ -1,0 +1,38 @@
+import java.util.Scanner;
+class employee
+{
+    String name;
+    int year;
+    String add;
+    public void input()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("ENTER THE EMPLOYEE NAME");
+        name=sc.next();
+        System.out.println("ENTER THE YEAR");
+        year=sc.nextInt();
+        System.out.println("ENTER THE ADDRESS");
+        add=sc.next();
+    }
+    public void display()
+    {
+        System.out.println("EMPLOYEE NAME IS "+name);
+        System.out.println("YEAR IS "+year);
+        System.out.println("ADDRESS IS "+add);
+    }
+    public static void main(String args[])
+    {    
+        int i;
+        employee e[]=new employee[3];
+        for(i=0;i<3;i++)
+        {
+            e[i]=new employee();
+            e[i].input();
+        }
+        System.out.println("OUTPUT IS");
+        for(i=0;i<3;i++)
+        {
+            e[i].display();
+        }
+    }
+}
